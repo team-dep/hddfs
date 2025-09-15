@@ -1,5 +1,30 @@
 /* Main CSS File - Import all components */
 
+/* Font Face */
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('../fonts/NotoSansKR-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('../fonts/NotoSansKR-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('../fonts/NotoSansKR-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Base Styles */
 @import url('./base/reset.css');
 @import url('./base/variables.css');
@@ -58,6 +83,13 @@ body.loaded {
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Base Typography */
+body {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    line-height: 1.6;
 }
 
 /* Focus Styles */

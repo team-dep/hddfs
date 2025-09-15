@@ -5,7 +5,7 @@
     color: #5c6677;
     column-gap: 24px;
     display: flex;
-    font-family: "Noto Sans CJK KR", 본고딕, "sans-serif", sans-serif;
+    font-family: var(--font-primary);
     font-size: 13px;
     font-weight: 400;
 }
