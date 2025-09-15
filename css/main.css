@@ -1,6 +1,7 @@
 /* Main CSS File - Import all components */
 
-/* Font Face */
+/* Font Face - Temporarily disabled for debugging */
+/*
 @font-face {
     font-family: 'Noto Sans KR';
     src: url('../fonts/NotoSansKR-Regular.woff2') format('woff2');
@@ -24,6 +25,7 @@
     font-style: normal;
     font-display: swap;
 }
+*/
 
 /* Base Styles */
 @import url('./base/reset.css');
