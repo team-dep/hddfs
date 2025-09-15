@@ -1,0 +1,389 @@
+/* Hamburger Menu Button */
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.hamburger-menu:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 2px 0;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Category Navigation - 현대면세점 스타일 */
+.navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 400px;
+}
+
+.navigation.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.area-gnb--side {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.area-gnb--side h2 {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* 카테고리 섹션 */
+.gnb-category {
+    padding: 30px 0;
+}
+
+.gnb-side__tit {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.gnb-category__content {
+    display: flex;
+    gap: 60px;
+}
+
+.gnb-category__inner {
+    flex: 1;
+}
+
+/* 1단계 카테고리 리스트 */
+.gnb-category--list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.gnb-category--list li {
+    margin: 0;
+}
+
+.gnb-category--list a {
+    display: block;
+    padding: 15px 20px;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.gnb-category--list li.is-active a,
+.gnb-category--list a:hover {
+    color: #000;
+    border-bottom-color: #000;
+    background-color: #f8f8f8;
+}
+
+/* 2단계 서브카테고리 */
+.gnb-category--2depth {
+    display: none;
+    padding: 20px 0;
+    list-style: none;
+    margin: 0;
+}
+
+.gnb-category--2depth.is-active {
+    display: block;
+}
+
+.gnb-category--2depth .link-all {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.gnb-category--2depth .link-all a {
+    font-weight: 600;
+    color: #000;
+    font-size: 16px;
+}
+
+.gnb-category--2depth > li {
+    margin-bottom: 20px;
+}
+
+.tab__snb-category {
+    display: block;
+    padding: 8px 0;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.tab__snb-category:hover {
+    color: #000;
+    border-bottom-color: #000;
+}
+
+/* 3단계 아이템 */
+.gnb-category--3depth {
+    display: none;
+    padding: 10px 0 0 20px;
+    list-style: none;
+    margin: 0;
+}
+
+.gnb-category--3depth.is-active {
+    display: block;
+}
+
+.gnb-category--3depth li {
+    margin-bottom: 8px;
+}
+
+.gnb-category--3depth a {
+    display: block;
+    padding: 5px 0;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.gnb-category--3depth a:hover {
+    color: #000;
+}
+
+/* 주요서비스 섹션 */
+.gnb-service {
+    padding: 30px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.list-quick-link {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-quick-link li {
+    margin: 0;
+}
+
+.list-quick-link a {
+    display: block;
+    padding: 15px;
+    background: #f8f8f8;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.list-quick-link a:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* 쇼룸 섹션 */
+.gnb-showroom {
+    padding: 30px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.swiper__gnb-showroom {
+    position: relative;
+}
+
+.list-product {
+    display: flex;
+    gap: 8px;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+}
+
+.product__item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.product__item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product__item a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.product__info--img {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #f8f8f8;
+}
+
+.product__info--img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.product__item:hover .product__info--img img {
+    transform: scale(1.05);
+}
+
+.product__info {
+    padding: 15px;
+}
+
+.product__brand {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.product__brand-info {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+/* 쇼룸 네비게이션 */
+.wrap-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.swiper-pagination-fraction {
+    font-size: 14px;
+    color: #666;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 30px;
+    height: 30px;
+    background: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: #000;
+    color: #fff;
+}
+
+.swiper-button-prev::before {
+    content: '‹';
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.swiper-button-next::before {
+    content: '›';
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Mobile Menu - 제거됨 (PC 전용) */
+
+/* 반응형 */
+@media (max-width: 1024px) {
+    .gnb-category__content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .list-quick-link {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .list-quick-link {
+        grid-template-columns: 1fr;
+    }
+    
+    .gnb-category--list {
+        flex-direction: column;
+    }
+    
+    .gnb-category--list a {
+        padding: 12px 15px;
+    }
+}

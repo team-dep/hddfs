@@ -1,0 +1,167 @@
+/* Cards Component Styles */
+
+/* Special Brand Section */
+.special-brand-section {
+    padding: 60px 0;
+    background: var(--bg-primary);
+}
+
+.section-title {
+    font-size: var(--font-2xl);
+    font-weight: var(--font-bold);
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--text-primary);
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.brand-card {
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-normal);
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.brand-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.brand-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.brand-card:hover .brand-img {
+    transform: scale(1.05);
+}
+
+.brand-content {
+    padding: 25px;
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: var(--font-bold);
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.brand-benefits {
+    margin-bottom: 20px;
+}
+
+.benefit-item {
+    margin-bottom: 15px;
+}
+
+.benefit-item .benefit-title {
+    font-size: var(--font-sm);
+    font-weight: var(--font-bold);
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.benefit-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.brand-btn {
+    width: 100%;
+    background: var(--text-primary);
+    color: var(--text-white);
+    border: none;
+    padding: 12px;
+    border-radius: var(--radius-md);
+    font-size: var(--font-sm);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.brand-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Relay Hotdeal Section */
+.relay-hotdeal-section {
+    padding: 60px 0;
+    background: var(--bg-secondary);
+}
+
+.hotdeal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.hotdeal-item {
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.hotdeal-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.hotdeal-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Card Hover Effects */
+.brand-card,
+.benefit-card,
+.hotdeal-item {
+    transition: all var(--transition-normal);
+}
+
+.brand-card:hover,
+.benefit-card:hover,
+.hotdeal-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .brand-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hotdeal-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-content {
+        padding: 20px;
+    }
+    
+    .hotdeal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

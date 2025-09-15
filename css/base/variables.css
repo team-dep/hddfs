@@ -1,0 +1,80 @@
+/* CSS Variables */
+:root {
+    /* Colors */
+    --primary-color: #FF3203;
+    --primary-hover: #e02a02;
+    --secondary-color: #6c757d;
+    --secondary-hover: #545b62;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    
+    /* Text Colors */
+    --text-primary: #333;
+    --text-secondary: #666;
+    --text-muted: #999;
+    --text-light: #ccc;
+    --text-white: #fff;
+    
+    /* Background Colors */
+    --bg-primary: #fff;
+    --bg-secondary: #f8f9fa;
+    --bg-dark: #333;
+    --bg-light: #f0f0f0;
+    
+    /* Border Colors */
+    --border-color: #ddd;
+    --border-light: #eef0f2;
+    --border-dark: #555;
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+    
+    /* Font Sizes */
+    --font-xs: 12px;
+    --font-sm: 14px;
+    --font-base: 16px;
+    --font-lg: 18px;
+    --font-xl: 24px;
+    --font-2xl: 32px;
+    --font-3xl: 36px;
+    
+    /* Font Weights */
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-full: 25px;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Z-index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+}

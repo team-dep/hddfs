@@ -1,0 +1,41 @@
+/* Utility Navigation */
+.utility-nav {
+    align-items: center;
+    box-sizing: border-box;
+    color: #5c6677;
+    column-gap: 24px;
+    display: flex;
+    font-family: "Noto Sans CJK KR", 본고딕, "sans-serif", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.utility-link {
+    color: #5c6677;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    font-weight: 500;
+    position: relative;
+}
+
+.utility-link:not(:first-child)::before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 1px;
+    height: 10px;
+    background-color: #dde0e5;
+    content: "";
+}
+
+.utility-link:hover {
+    color: var(--primary-color);
+}
+
+.utility-link.active {
+    color: var(--primary-color);
+    font-weight: var(--font-medium);
+}
